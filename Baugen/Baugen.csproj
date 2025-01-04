@@ -35,7 +35,7 @@
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageOutputPath>$(SolutionDir)publish</PackageOutputPath>
+    <PackageOutputPath>$(MSBuildThisFileDir)publish</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
