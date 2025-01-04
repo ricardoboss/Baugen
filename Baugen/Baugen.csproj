@@ -22,15 +22,17 @@
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>Ricardo Boss</Authors>
     <Copyright>Copyright © 2025 Ricardo Boss</Copyright>
-    <RepositoryUrl>https://github.com/ricardoboss/Baugen</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
     <PackageTags>Roslyn</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ricardoboss/Baugen</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <RepositoryUrl>https://github.com/ricardoboss/Baugen.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
