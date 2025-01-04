@@ -12,22 +12,18 @@ public class BaugenGenerator : IIncrementalGenerator
     {
         var rootNamespaceProvider = context.AnalyzerConfigOptionsProvider.Select((o, _) =>
         {
-            o.GlobalOptions.TryGetValue("build_property.RootNamespacce", out var rootNamespace);
+            o.GlobalOptions.TryGetValue("build_property.RootNamespace", out var rootNamespace);
 
             return rootNamespace;
         });
 
-        var combined = rootNamespaceProvider.Combine(context.CompilationProvider);
-
-        context.RegisterSourceOutput(combined, Generate);
+        context.RegisterSourceOutput(rootNamespaceProvider, Generate);
     }
 
-    private static void Generate(SourceProductionContext context, (string?, Compilation) node)
+    private static void Generate(SourceProductionContext context, string? rootNamespace)
     {
-        var (rootNamespace, compilation) = node;
-
         var timestamp = DateTimeOffset.UtcNow;
-        var @namespace = rootNamespace ?? compilation.AssemblyName ?? "Baugen";
+        var @namespace = rootNamespace ?? "Baugen";
         const string className = "BuildMetadata";
         var source = GenerateSource(className, timestamp, @namespace);
 

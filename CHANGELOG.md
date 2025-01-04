@@ -1,6 +1,7 @@
 # Unreleased
 
 - Don't make the auto-generated comment an xml comment
+- Fixed typo in getting root namespace property
 
 # 1.0.1
 
