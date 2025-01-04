@@ -19,4 +19,4 @@ The following properties are available:
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.md)
