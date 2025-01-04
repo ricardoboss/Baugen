@@ -1,4 +1,4 @@
-# Unreleased
+# 1.0.2
 
 - Don't make the auto-generated comment an xml comment
 - Fixed typo in getting root namespace property
