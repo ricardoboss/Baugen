@@ -1,3 +1,8 @@
+# 1.0.3
+
+- Added missing using
+- Include git commit id as version for Baugen in generated code
+
 # 1.0.2
 
 - Don't make the auto-generated comment an xml comment
